@@ -1,12 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - namespace.yaml
-  - deployment.yaml
-  - service.yaml
-  - ingress.yaml
+- namespace.yaml
+- deployment.yaml
+- service.yaml
+- ingress.yaml
 namespace: nodejs
 images:
-  - name: nodejs
-    newName: alexandersarson/nodejs
-    newTag: bd0b95a1e7e31fd3a30c0a979ffbfc45761b001f
+- name: nodejs
+  newName: alexandersarson/nodejs
+  newTag: 4c9503ca1610134fadb04eab31753730ebb82cd9

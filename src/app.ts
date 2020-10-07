@@ -5,7 +5,7 @@ const app = express();
 
 
 app.get("/api/dummy", (req, res) => {
-  res.json({ msg: "Hello" })
+  res.json({ msg: "This is working" })
 })
 
 const PORT = process.env.PORT || 3000;

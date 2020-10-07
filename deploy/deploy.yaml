@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: spark
+  namespace: nodejs
   creationTimestamp: null
   labels:
-    app: spark-deploy
-  name: spark-deploy
+    app: nodejs-deploy
+  name: nodejs-deploy
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spark-deploy
+      app: nodejs-deploy
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: spark-deploy
+        app: nodejs-deploy
     spec:
       containers:
-        - image: alexandersarson/sparkjava:v4
-          name: spark
+        - image: alexandersarson/nodejs
+          name: nodejs
           ports:
-            - containerPort: 4567
+            - containerPort: 3000
           resources: {}
 status: {}

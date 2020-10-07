@@ -8,7 +8,7 @@ app.get("/api/dummy", (req, res) => {
   res.json({ msg: "Hello" })
 })
 
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT)
 console.log(`Server started, listening on port: ${PORT}`)
 module.exports.server = server;

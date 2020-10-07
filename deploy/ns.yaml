@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2020-10-07T18:18:43Z"
+  name: nodejs
+  resourceVersion: "19985734"
+  selfLink: /api/v1/namespaces/nodejs
+  uid: 244a9691-c341-4fe0-a478-b4594b895ea7
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

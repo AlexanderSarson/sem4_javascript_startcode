@@ -19,7 +19,7 @@ spec:
         app: nodejs-deploy
     spec:
       containers:
-        - image: alexandersarson/nodejs
+        - image: nodejs
           name: nodejs
           ports:
             - containerPort: 3000

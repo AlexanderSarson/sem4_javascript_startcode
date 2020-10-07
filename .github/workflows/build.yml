@@ -35,7 +35,7 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:latest 
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:${{ github.run_id }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:${{ github.sha}}
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -55,7 +55,7 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         run: |
           cd deploy
-          kustomize edit set image ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}=${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:${{ github.run_id }}
+          kustomize edit set image ${{ secrets.DOCKERHUB_IMAGENAME }}=${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGENAME }}:${{ github.sha }}
           cat kustomization.yaml
 
       - name: Commit files

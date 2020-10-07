@@ -8,4 +8,4 @@ namespace: nodejs
 images:
 - name: nodejs
   newName: alexandersarson/nodejs
-  newTag: 3d93a3aa4245f58a8cef56ed6d4cd3d9957df7e3
+  newTag: 0be2c1cf9bcd2d42bc9442627b9ccfdd73fb9ef9
